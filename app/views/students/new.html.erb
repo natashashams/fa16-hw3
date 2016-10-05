@@ -1,0 +1,24 @@
+<form action="/students" method="POST">
+  <h1>Make Your Rapper Name <i>(Iggy Azalea Style)</i> </h1>
+
+  <br></br>
+
+  <label>Full name</label>
+  <input name="full_name" placeholder=<%= @placeholder_full_name %> type="text"></input>
+  <br></br>
+  <br></br>
+  <label>Your first pet's name (or the name you would give your pet if you had one)</label>
+  <input
+    name="pet_name"
+    placeholder=<%= @placeholder_pet_name %>
+    type="text"
+  >
+  </input>
+  <br></br>
+  <br></br>
+  <label>The street you grew up on</label>
+  <input name="street_name" placeholder=<%= @placeholder_street_name %> type="text"></input>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  
+  <button type="submit">Create Rapper Name</button>
+</form>
